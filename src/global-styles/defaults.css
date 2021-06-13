@@ -1,3 +1,8 @@
+#app-root {
+  @apply flex flex-col min-h-screen;
+  /* ensure that viewport height is full, at minimum */
+}
+
 main {
   @apply w-full max-w-5xl mx-auto px-4;
   flex: 1 1 auto;

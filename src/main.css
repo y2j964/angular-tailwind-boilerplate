@@ -1,8 +1,8 @@
 /*! purgecss start ignore */
 @import "tailwindcss/base";
-@import "global-styles/variables.scss";
-@import "global-styles/defaults.scss";
-@import "global-styles/miscellaneous.scss";
+@import "global-styles/variables.css";
+@import "global-styles/defaults.css";
+@import "global-styles/miscellaneous.css";
 @import "tailwindcss/components";
 /*! purgecss end ignore */
 @import "tailwindcss/utilities";
