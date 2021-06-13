@@ -1,0 +1,6 @@
+main {
+  @apply w-full max-w-5xl mx-auto px-4;
+  flex: 1 1 auto;
+    /* ensure that footer doesn't creep up the page if there isn't much content within main */
+}
+
