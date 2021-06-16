@@ -1,0 +1,3 @@
+.page-header {
+  @apply text-4xl font-bold text-center pt-12 pb-32 bg-green-200 text-white;
+}

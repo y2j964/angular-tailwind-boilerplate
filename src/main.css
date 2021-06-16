@@ -2,6 +2,7 @@
 @import "tailwindcss/base";
 @import "global-styles/variables.css";
 @import "global-styles/defaults.css";
+@import "global-styles/btn.css";
 @import "global-styles/miscellaneous.css";
 @import "tailwindcss/components";
 /*! purgecss end ignore */

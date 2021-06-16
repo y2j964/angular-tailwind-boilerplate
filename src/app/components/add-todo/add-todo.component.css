@@ -1,0 +1,4 @@
+.add-todo {
+  @apply rounded p-6 max-w-xl shadow bg-white mx-auto;
+  margin-top: -3rem;
+}

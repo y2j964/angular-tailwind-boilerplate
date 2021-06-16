@@ -1,0 +1,14 @@
+<form class="add-todo" (ngSubmit)="handleSubmit()">
+  <label for="todoTitle" class="mb-6 font-bold text-xl block">New Todo</label>
+  <div class="flex">
+    <input
+      class="w-full border-2 border-gray shadow-sm p-2 mr-2"
+      type=""
+      placeholder="Type todo text here ..."
+      id="todoTitle"
+      name="todoTitle"
+      [(ngModel)]="model.todoTitle"
+    />
+    <button class="btn btn--primary" (click)="handleSubmit()">Add</button>
+  </div>
+</form>
