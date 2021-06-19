@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TodoService } from './services/todo.service';
 import { Todo } from './models/todo';
 
 @Component({
@@ -7,35 +8,30 @@ import { Todo } from './models/todo';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  todos: Todo[] = [];
+  todos: Todo[];
+  constructor(private todoService: TodoService) {}
 
-  constructor() {}
-
-  ngOnInit(): void {
-    this.todos = [
-      {
-        title: 'Research Monkey News',
-        completed: false,
-      },
-
-      {
-        title: 'Fix the boiler',
-        completed: false,
-      },
-      {
-        title: 'Edit Songs of Phrase',
-        completed: false,
-      },
-    ];
+  trackByTodoId(index: number, todo: Todo) {
+    return todo.id;
   }
 
-  addTodo(todo: Todo): void {
-    console.log('add todo');
-    this.todos.push(todo);
-    console.log(this.todos);
+  ngOnInit() {
+    this.todoService
+      .getTodos()
+      .subscribe((todos: Todo[]) => (this.todos = todos));
   }
 
-  deleteTodo(targetedId: string): void {
-    this.todos = this.todos.filter((todo) => todo.title !== targetedId);
+  addTodo(todo: Todo) {
+    this.todoService
+      .addTodo(todo)
+      .subscribe((res: Todo) => this.todos.push(res));
+  }
+
+  deleteTodo(targetedId: string) {
+    this.todoService
+      .deleteTodo(targetedId)
+      .subscribe(
+        () => (this.todos = this.todos.filter(({ id }) => id !== targetedId))
+      );
   }
 }

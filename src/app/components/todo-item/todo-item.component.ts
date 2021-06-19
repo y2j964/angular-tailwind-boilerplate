@@ -13,7 +13,6 @@ export class TodoItemComponent {
   constructor() {}
 
   handleDeleteTodo() {
-    console.log('delete');
-    this.deleteTodo.emit(this.todo.title);
+    this.deleteTodo.emit(this.todo.id);
   }
 }

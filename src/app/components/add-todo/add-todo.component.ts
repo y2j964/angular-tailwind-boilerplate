@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import * as uuid from 'uuid';
 import { Todo } from '../../models/todo';
 
 @Component({
@@ -13,12 +14,11 @@ export class AddTodoComponent {
     todoTitle: '',
   };
 
-  constructor() {}
-
   handleSubmit() {
     if (!this.model.todoTitle) return;
 
     const newTodo: Todo = {
+      id: uuid.v4(),
       title: this.model.todoTitle,
       completed: false,
     };
