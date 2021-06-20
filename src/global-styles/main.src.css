@@ -1,0 +1,9 @@
+/*! purgecss start ignore */
+@import "tailwindcss/base";
+@import "variables.css";
+@import "defaults.css";
+@import "btn.css";
+@import "miscellaneous.css";
+@import "tailwindcss/components";
+/*! purgecss end ignore */
+@import "tailwindcss/utilities";
