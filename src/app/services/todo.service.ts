@@ -8,7 +8,7 @@ import { Todo } from '../models/todo';
   providedIn: 'root',
 })
 export class TodoService {
-  private apiUrl = 'http://localhost:5000/todos';
+  private apiUrl = 'http://localhost:3000/todos';
 
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
